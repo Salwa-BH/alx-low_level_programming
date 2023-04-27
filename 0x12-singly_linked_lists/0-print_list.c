@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * size_t print_list(const list_t *h) 
+ * size_t print_list(const list_t *h)
  * @h: name of the list
  * Return: the number of nodes
  */
