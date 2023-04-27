@@ -1,12 +1,12 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - check the code for Holberton School students.
+ * size_t print_list(const list_t *h)
  * @h: name of the list
- * Return: the number of nodes.
+ * Return: the number of nodes
  */
 size_t print_list(const list_t *h)
 {
