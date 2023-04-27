@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
@@ -17,11 +16,18 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (lst == NULL || str == NULL)
 		return (NULL);
+	
 	lst->str = strdup(str);
 	while (str[sizeString] != '\0')
-	sizeString++;
+		sizeString++;
 	lst->len = sizeString;
 	lst->next = NULL;
+	
+	if (*head == NULL)
+	{
+		*head = lst;
+		return lst;
+	}
 	while (*head)
 	{
 		if ((*head)->next == NULL)
