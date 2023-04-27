@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
+#include <string.h>
 #include "lists.h"
 
 /**
@@ -10,12 +10,14 @@
 */
 size_t print_list(const list_t *h)
 {
+    list_t* current = NULL;
     size_t nbr = 0;
     if( h == NULL)
         return 0;
     
-    list_t* current = NULL;
-    current = h;
+    
+    current = (list_t *) h;
+
     while(current != NULL)
     {
         nbr++;

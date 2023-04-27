@@ -3,14 +3,14 @@
 
 /**
  * struct list_t: single linked list
- * @c: string
+ * @str: string
  * @len: len of string
  * @next: points to next node
  *
  * Description: singly linked list
  */
 typedef struct node {
-    char *c;
+    char *str;
     int len;
     struct node *next;
 } list_t;
