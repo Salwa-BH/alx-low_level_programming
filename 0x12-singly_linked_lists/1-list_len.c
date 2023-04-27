@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * size_t list_len(const list_t *h)
+ * list_len - to return size of a list
  * @h: name of the list
  * Return: the number of elements in a linked list
  */
