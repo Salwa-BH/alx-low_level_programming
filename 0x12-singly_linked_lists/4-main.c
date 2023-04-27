@@ -1,25 +1,19 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * main - check the code
+ * free_list - Realease the memory allocated for a list
  *
- * Return: Always 0.
+ * @head: A pointer to the first node of the list to free
  */
-int main(void)
+void free_list(list_t *head)
 {
-    list_t *head;
-
-    head = NULL;
-    add_node_end(&head, "Bob");
-    add_node_end(&head, "&");
-    add_node_end(&head, "Kris");
-    add_node_end(&head, "love");
-    add_node_end(&head, "asm");
-    print_list(head);
-    free_list(head);
-    head = NULL;
-    return (0);
+	if (head)
+	{
+		free_list(head->next);
+		if (head->str)
+			free(head->str);
+		free(head);
+	}
 }
