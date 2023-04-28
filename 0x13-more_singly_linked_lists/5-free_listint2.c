@@ -2,10 +2,12 @@
 #include "lists.h"
 
 /**
- * free_listint -  frees a list.
+ * free_listint - Frees a list recursibely using double pointers
  * @head: double pointer of the list
+ * Description: frees a list
  * Return:  nothing.
  */
+
 void free_listint2(listint_t **head)
 {
 	if (head == NULL)
