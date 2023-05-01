@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 
-/*
+/**
  * print_listint_safe - prints a list.
  * @head: head of linked list
  * Return: the number of nodes in the list
